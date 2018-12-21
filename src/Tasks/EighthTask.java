@@ -14,7 +14,7 @@ public class EighthTask {
             array[i] = q;
         }
         for (int temp:array){
-            System.out.println(temp);
+            System.out.println(temp*2);
         }
     }
 }

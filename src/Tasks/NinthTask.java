@@ -15,6 +15,7 @@ public class NinthTask {
         for (int i=0;i<2;i++){
             for (int q =0;q<4;q++){
                 System.out.print(matrix [i] [q]*3+" ");
+
             }
             break;
         }

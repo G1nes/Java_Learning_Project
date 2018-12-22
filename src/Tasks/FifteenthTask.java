@@ -8,6 +8,7 @@ public class FifteenthTask {
         try (BufferedReader buffer = new BufferedReader(new FileReader("E:\\ссылки на задачи\\Задача 15.txt"))){
             while ((s=buffer.readLine())!=null){
             System.out.println(s);
+
             }
         }catch (IOException e){
             System.out.println("=\\ файл не найден");

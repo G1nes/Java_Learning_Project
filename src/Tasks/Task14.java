@@ -1,6 +1,6 @@
 package Tasks;
 
-public class FourthteenthTask {
+public class Task14 {
     public static void main (String [] args){
         int [] list = {5,6,100,135,98,1,10};
         showMeArray(bubbleSort(list));

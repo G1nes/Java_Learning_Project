@@ -2,7 +2,7 @@ package Tasks;
 
 import java.io.*;
 
-public class SeventeenthTask {
+public class Task17 {
     public static void main (String [] args) throws IOException {
         String showMeData;
         int stringCounter=0;

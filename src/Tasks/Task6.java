@@ -2,7 +2,7 @@ package Tasks;
 
 import java.util.Scanner;
 
-public class FourthTask {
+public class Task6 {
     public static void main (String [] args) {
         int x=1, y=2,z=3;
         Scanner s = new Scanner(System.in);

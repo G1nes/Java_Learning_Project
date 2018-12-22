@@ -2,10 +2,7 @@ package Tasks;
 
 import java.util.Scanner;
 
-//Некорретное задание, т.к. не определены ограничения.
-//Поэтому как ограничение возьму формат ввода = целые числа и 10 операций ввода.
-
-public class EighthTask {
+public class Task8 {
     public static void main (String []args){
         int [] array = new int[10];
         Scanner s = new Scanner(System.in);

@@ -2,8 +2,8 @@ package Tasks;
 
 import java.util.Scanner;
 
-public class NinthTask {
-    //матрица какого размера требуется?
+public class Task9 {
+
     public static void main (String [] args){
         int [] [] matrix = new int [2] [4];
         Scanner s = new Scanner(System.in);

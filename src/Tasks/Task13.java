@@ -2,7 +2,7 @@ package Tasks;
 
 import java.util.Scanner;
 
-public class ThirdteenthTask {
+public class Task13 {
     public static void main (String [] args){
         Scanner sc = new Scanner(System.in);
         String s = Integer.toString(sc.nextInt());

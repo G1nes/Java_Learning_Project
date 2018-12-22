@@ -1,8 +1,8 @@
-package FifthTask;
+package Tasks;
 
 import java.util.Scanner;
 
-public class SecondTask {
+public class Task5 {
     public static void main (String [] args){
         Scanner s= new Scanner(System.in);
         String q = s.next();

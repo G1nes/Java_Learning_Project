@@ -1,6 +1,6 @@
 package Tasks;
 
-public class FifthTask {
+public class Task7 {
     public static void main (String [] args){
         for (int i=1;i<=50;i++){
             System.out.println(i);

@@ -1,8 +1,6 @@
 package TasksJava2;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Map;
 import java.util.Scanner;
 
 public class CalculatorMain {
@@ -17,28 +15,32 @@ public class CalculatorMain {
         methodRecognition(stringToDoubleConverter(command));
     }
     private static void methodRecognition (Object [] array){
+        try{
         Character operator = (Character) array[2];
-        switch (operator){
+        switch (operator) {
             case '*':
-                double a = (double) array [0] * (double) array[1];
+                double a = (double) array[0] * (double) array[1];
                 System.out.println(a);
                 break;
             case '/':
-                double b = (double) array [0] / (double) array[1];
+                double b = (double) array[0] / (double) array[1];
                 System.out.println(b);
                 break;
             case '+':
-                double c = (double) array [0] + (double) array[1];
+                double c = (double) array[0] + (double) array[1];
                 System.out.println(c);
                 break;
             case '-':
-                double d = (double) array [0] - (double) array[1];
+                double d = (double) array[0] - (double) array[1];
                 System.out.println(d);
                 break;
             /*default:
                 System.out.println("Try again, use \"*\", \"/\", \"+\", \"-\" as operator" );
                 methodRecognition(stringToDoubleConverter(command));
                 break;*/
+        }
+        }catch (NullPointerException e){
+
         }
     }
     private static Object [] stringToDoubleConverter (String method){
@@ -52,16 +54,18 @@ public class CalculatorMain {
         //Заносим числа и знак в массив
         array[0] = Double.valueOf(tmp[0]);
         array[1] = Double.valueOf(tmp[1]);
-        char result=0;
-        for (int i=0;i<method.length();i++){
-            if (method.charAt(i)=='+'||method.charAt(i)=='-'||method.charAt(i)=='*'||method.charAt(i)=='/'){
-                array[2]= result;
-            }else{
-                System.out.println("Try again, use \"*\", \"/\", \"+\", \"-\" as operator");
-                command = s.nextLine();
-                methodRecognition(stringToDoubleConverter(command));
+            if (method.contains("*")){
+            array[2]= '*';
+            }if (method.contains("/")){
+            array[2]= '/';
+            }if (method.contains("+")){
+                array[2]= '+';
+            }if (method.contains("-")) {
+                array[2] = '-';
             }
-        }
+            for (int i=0;i<array.length;i++){
+                System.out.println(array[i]);
+            }
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
             command = s.nextLine();

@@ -45,24 +45,36 @@ public class CalculatorMain {
     }
     private static Object [] stringToDoubleConverter (String method){
         Object [] array = new Object[3];
+        String result="";
+        if (method.charAt(0)=='+') {
+            for (int i = 1; i < method.length(); i++) {
+                result += method.charAt(i);
+            }
+        }else{
+            result=method;
+        }
         try{
             //Определяем знак выражения
-            for (int i=0;i<method.length();i++){
-                if (method.charAt(i)=='+'||method.charAt(i)=='-'||method.charAt(i)=='*'||method.charAt(i)=='/'){
-                    array[2]=method.charAt(i);
+            for (int i=0;i<result.length();i++){
+                if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'){
+                    array[2]=result.charAt(i);
                     break;
                 }
             }
             //Делим строку на два числа относительно знака
             String [] tmp;
-            tmp=method.split("\\+|\\-|\\*|\\/");
+            tmp=result.split("\\+|\\-|\\*|\\/");
             //Заносим числа и знак в массив
             array[0] = Double.valueOf(tmp[0]);
             array[1] = Double.valueOf(tmp[1]);
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
             command = s.nextLine();
-            methodRecognition(stringToDoubleConverter(command));
+            if (isPositive(command)){
+                methodRecognition(stringToDoubleConverter(command));
+            }else{
+                methodRecognition(stringToDoubleConverterNegative(command));
+            }
         }
         return array;
     }
@@ -90,14 +102,18 @@ public class CalculatorMain {
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
             command = s.nextLine();
-            methodRecognition(stringToDoubleConverter(command));
+            if (isPositive(command)){
+                methodRecognition(stringToDoubleConverter(command));
+            }else{
+                methodRecognition(stringToDoubleConverterNegative(command));
+            }
         }
         return array;
     }
     private static boolean isPositive (String method){
         boolean positive;
         method = method.replaceAll("\\s+","");
-        if (method.charAt(0)!='-'){
+        if (method.charAt(0)!='-'||method.charAt(0)=='+'){
             positive = true;
         }else{
             positive = false;

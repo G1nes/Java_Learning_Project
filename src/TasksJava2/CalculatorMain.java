@@ -57,10 +57,6 @@ public class CalculatorMain {
             //Заносим числа и знак в массив
             array[0] = Double.valueOf(tmp[0]);
             array[1] = Double.valueOf(tmp[1]);
-            //Содержимое массива
-            for (int i=0;i<array.length;i++){
-                System.out.println(array[i]);
-            }
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
             command = s.nextLine();

@@ -23,20 +23,16 @@ public class CalculatorMain {
         Character operator = (Character) array[2];
         switch (operator) {
             case '*':
-                Multiplication m = new Multiplication();
-                m.multiplication(array[0],array[1]);
+                Multiplication.m.multiplication(array[0],array[1]);
                 break;
             case '/':
-                Division d = new Division();
-                d.division(array[0],array[1]);
+                Division.d.division(array[0],array[1]);
                 break;
             case '+':
-                Addition a = new Addition();
-                a.addition(array[0],array[1]);
+                Addition.a.addition(array[0],array[1]);
                 break;
             case '-':
-                Subtraction s = new Subtraction();
-                s.subtraction(array[0],array[1]);
+                Subtraction.s.subtraction(array[0],array[1]);
                 break;
         }
         }catch (NullPointerException e){

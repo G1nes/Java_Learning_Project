@@ -43,9 +43,21 @@ public class CalculatorMain {
     private static Object [] stringToDoubleConverter (String method){
         Object [] array = new Object[3];
         try{
+            if (method.contains("*")){
+                array[2] ="*";
+            }else if (method.contains("/")){
+                array[2] ="/";
+            }else if (method.contains("+")) {
+                array[2] = "+";
+            }else if (method.contains("-")) {
+                array[2] = "-";
+            }else{
+                System.out.println("Try again, use \"*\", \"/\", \"+\", \"-\" as operator" );
+                methodRecognition(stringToDoubleConverter(command));
+            }
 
         }catch (NumberFormatException e){
-            System.out.println("Try again, use \"*\", \"/\", \"+\", \"-\" as operator" );
+            System.out.println("Please enter numbers");
             methodRecognition(stringToDoubleConverter(command));
         }
         return array;

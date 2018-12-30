@@ -34,35 +34,30 @@ public class CalculatorMain {
                 double d = (double) array[0] - (double) array[1];
                 System.out.println(d);
                 break;
-            /*default:
-                System.out.println("Try again, use \"*\", \"/\", \"+\", \"-\" as operator" );
-                methodRecognition(stringToDoubleConverter(command));
-                break;*/
         }
         }catch (NullPointerException e){
-
+            System.out.println(e.getMessage());
         }
     }
     private static Object [] stringToDoubleConverter (String method){
         Object [] array = new Object[3];
         //Убираем пробелы
         method = method.replaceAll("\\s+","");
-        //Делим строку на два числа относительно знака
-        String [] tmp;
-        tmp=method.split("\\+|\\-|\\*|\\/");
         try{
-        //Заносим числа и знак в массив
-        array[0] = Double.valueOf(tmp[0]);
-        array[1] = Double.valueOf(tmp[1]);
-            if (method.contains("*")){
-            array[2]= '*';
-            }if (method.contains("/")){
-            array[2]= '/';
-            }if (method.contains("+")){
-                array[2]= '+';
-            }if (method.contains("-")) {
-                array[2] = '-';
+            //Определяем знак выражения
+            for (int i=0;i<method.length();i++){
+                if (method.charAt(i)=='+'||method.charAt(i)=='-'||method.charAt(i)=='*'||method.charAt(i)=='/'){
+                    array[2]=method.charAt(i);
+                    break;
+                }
             }
+            //Делим строку на два числа относительно знака
+            String [] tmp;
+            tmp=method.split("\\+|\\-|\\*|\\/");
+            //Заносим числа и знак в массив
+            array[0] = Double.valueOf(tmp[0]);
+            array[1] = Double.valueOf(tmp[1]);
+            //Содержимое массива
             for (int i=0;i<array.length;i++){
                 System.out.println(array[i]);
             }

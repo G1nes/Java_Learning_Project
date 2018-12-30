@@ -62,11 +62,11 @@ public class CalculatorMain {
                     counterP++;
                     counterN++;
                     for (int y=i+1;y<result.length();y++){
-                        if (result.charAt(i)=='+'){
+                        if (result.charAt(y)=='+'){
                             counterP++;
                             break;
                         }
-                        if (result.charAt(i)=='-'){
+                        if (result.charAt(y)=='-'){
                             counterN++;
                             break;
                         }
@@ -115,11 +115,11 @@ public class CalculatorMain {
                     counterP++;
                     counterN++;
                     for (int y=i+1;y<result.length();y++){
-                        if (result.charAt(i)=='+'){
+                        if (result.charAt(y)=='+'){
                             counterP++;
                             break;
                         }
-                        if (result.charAt(i)=='-'){
+                        if (result.charAt(y)=='-'){
                             counterN++;
                             break;
                         }

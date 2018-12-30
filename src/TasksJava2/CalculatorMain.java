@@ -31,8 +31,8 @@ public class CalculatorMain {
                 d.division(array[0],array[1]);
                 break;
             case '+':
-                Addition c = new Addition();
-                c.addition(array[0],array[1]);
+                Addition a = new Addition();
+                a.addition(array[0],array[1]);
                 break;
             case '-':
                 Subtraction s = new Subtraction();

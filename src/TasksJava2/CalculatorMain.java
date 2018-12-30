@@ -23,20 +23,20 @@ public class CalculatorMain {
         Character operator = (Character) array[2];
         switch (operator) {
             case '*':
-                double a = (double) array[0] * (double) array[1];
-                System.out.println(a);
+                Multiplication m = new Multiplication();
+                m.multiplication(array[0],array[1]);
                 break;
             case '/':
-                double b = (double) array[0] / (double) array[1];
-                System.out.println(b);
+                Division d = new Division();
+                d.division(array[0],array[1]);
                 break;
             case '+':
-                double c = (double) array[0] + (double) array[1];
-                System.out.println(c);
+                Addition c = new Addition();
+                c.addition(array[0],array[1]);
                 break;
             case '-':
-                double d = (double) array[0] - (double) array[1];
-                System.out.println(d);
+                Subtraction s = new Subtraction();
+                s.subtraction(array[0],array[1]);
                 break;
         }
         }catch (NullPointerException e){

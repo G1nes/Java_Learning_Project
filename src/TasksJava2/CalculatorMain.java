@@ -55,9 +55,22 @@ public class CalculatorMain {
         }
         try{
             //Определяем знак выражения
+            int counterP=0,counterN=0;
             for (int i=0;i<result.length();i++){
                 if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'){
                     array[2]=result.charAt(i);
+                    counterP++;
+                    counterN++;
+                    for (int y=i+1;y<result.length();y++){
+                        if (result.charAt(i)=='+'){
+                            counterP++;
+                            break;
+                        }
+                        if (result.charAt(i)=='-'){
+                            counterN++;
+                            break;
+                        }
+                    }
                     break;
                 }
             }
@@ -66,7 +79,15 @@ public class CalculatorMain {
             tmp=result.split("\\+|\\-|\\*|\\/");
             //Заносим числа и знак в массив
             array[0] = Double.valueOf(tmp[0]);
-            array[1] = Double.valueOf(tmp[1]);
+            if (tmp[1].isEmpty()&&counterP>1){
+                array[1] = Double.valueOf(tmp[2]);
+            }else if(tmp[1].isEmpty()&&counterN>1){
+                array[1] = Double.valueOf(tmp[2])*-1;
+            }else if(tmp[1].isEmpty()){
+                array[1] = Double.valueOf(tmp[2]);
+            }else{
+                array[1] = Double.valueOf(tmp[1]);
+            }
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
             command = s.nextLine();
@@ -87,18 +108,39 @@ public class CalculatorMain {
         }
         try{
             //Определяем знак выражения
+            int counterP=0,counterN=0;
             for (int i=0;i<result.length();i++){
                 if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'){
                     array[2]=result.charAt(i);
+                    counterP++;
+                    counterN++;
+                    for (int y=i+1;y<result.length();y++){
+                        if (result.charAt(i)=='+'){
+                            counterP++;
+                            break;
+                        }
+                        if (result.charAt(i)=='-'){
+                            counterN++;
+                            break;
+                        }
+                    }
                     break;
                 }
             }
             //Делим строку на два числа относительно знака
             String [] tmp;
             tmp=result.split("\\+|\\-|\\*|\\/");
-            //Заносим числа и знак в массив, первое число домножаем на -1
+            //Заносим числа и знак в массив
             array[0] = Double.valueOf(tmp[0])*-1;
-            array[1] = Double.valueOf(tmp[1]);
+            if (tmp[1].isEmpty()&&counterP>1){
+                array[1] = Double.valueOf(tmp[2]);
+            }else if(tmp[1].isEmpty()&&counterN>1){
+                array[1] = Double.valueOf(tmp[2])*-1;
+            }else if(tmp[1].isEmpty()){
+                array[1] = Double.valueOf(tmp[2]);
+            } else{
+                array[1] = Double.valueOf(tmp[1]);
+            }
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
             command = s.nextLine();

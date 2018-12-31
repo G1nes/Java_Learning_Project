@@ -10,8 +10,9 @@ public class CalculatorMain {
 
     public static void main (String [] args) throws IOException{
         s = new Scanner(System.in);
-        System.out.println("To show calculator syntax enter \"show me\""+"\nOR\nWrite command in format: \"a command b\"");
+        System.out.println("To show calculator syntax enter \"show me\"\nOR\nWrite command in format: \"a command b\"");
         command = s.nextLine();
+        Description.readCommand(command);
         if (isPositive(command)){
             methodRecognition(stringToDoubleConverter(command));
         }else{

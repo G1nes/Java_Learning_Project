@@ -8,6 +8,7 @@ public class LongestStringFinder {
     private static int arrayLength;
 
     public static void main (String [] args){
+        s = new Scanner(System.in);
         System.out.println("Please enter array length");
         arrayLength = s.nextInt();
         System.out.println("Please enter some");

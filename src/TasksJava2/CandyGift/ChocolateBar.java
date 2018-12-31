@@ -1,11 +1,13 @@
 package TasksJava2.CandyGift;
 
 public class ChocolateBar extends Gift{
+    private String name;
     private double price;
     private double weight;
     private String taste;
 
-    public ChocolateBar (double price, double weight, String taste){
+    public ChocolateBar (String name, double price, double weight, String taste){
+        this.name = name;
         this.price=price;
         this.weight=weight;
         this.taste = taste;
@@ -15,5 +17,8 @@ public class ChocolateBar extends Gift{
     }
     public double getWeight() {
         return weight;
+    }
+    public String getName(){
+        return name;
     }
 }

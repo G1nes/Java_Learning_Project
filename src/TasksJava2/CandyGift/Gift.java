@@ -10,10 +10,10 @@ public double weightResult =0;
     }
     public Gift(){
     }
-    private double getWeight(){
+    public double getWeight(){
         return weightResult;
     }
-    private double getPrice(){
+    public double getPrice(){
         return priceResult;
     }
 }

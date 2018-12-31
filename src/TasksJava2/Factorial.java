@@ -1,8 +1,8 @@
 package TasksJava2;
 
 public class Factorial {
-    public int factorial (Object a){
-        int d = Math.round((int)a);
+    public long factorial (Object a){
+        long d = Math.round((long)a);
         if (d==0){
             d=1;
         }else if (d<0){
@@ -13,7 +13,7 @@ public class Factorial {
 
         return d;
     }
-    public void printFactorial (int d){
+    public void printFactorial (long d){
         System.out.println(d);
     }
 }

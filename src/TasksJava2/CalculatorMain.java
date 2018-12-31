@@ -99,7 +99,7 @@ public class CalculatorMain {
             tmp=result.split("\\+|\\-|\\*|\\/|\\%|\\!|\\^|l|s");
             //Заносим числа и знак в массив
             if (array[2].equals('!')){
-                array[0] = (int)Math.floor(Double.valueOf(tmp[0]));
+                array[0] = (long)Math.floor(Double.valueOf(tmp[0]));
             }else {
                 array[0] = Double.valueOf(tmp[0]);
                 if (tmp[1].isEmpty() && counterP > 1) {
@@ -156,7 +156,7 @@ public class CalculatorMain {
             tmp=result.split("\\+|\\-|\\*|\\/|\\%|\\!|\\^|l|s");
             //Заносим числа и знак в массив
             if (array[2].equals('!')){
-                array[0] = (int)Math.floor(Double.valueOf(tmp[0]));
+                array[0] = (long)Math.floor(Double.valueOf(tmp[0]));
             }else {
                 array[0] = Double.valueOf(tmp[0]) * -1;
                 if (tmp[1].isEmpty() && counterP > 1) {

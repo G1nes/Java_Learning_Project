@@ -38,6 +38,26 @@ public class CalculatorMain {
                 Subtraction s = new Subtraction();
                 s.subtraction(array[0],array[1]);
                 break;
+            case 's':
+
+
+                break;
+            case '^':
+                Extent e = new Extent();
+                e.extent(array[0],array[1]);
+                break;
+            case '!':
+
+
+                break;
+            case 'l':
+
+
+                break;
+            case '%':
+
+
+                break;
         }
         }catch (NullPointerException e){
             System.out.println(e.getMessage());
@@ -57,7 +77,7 @@ public class CalculatorMain {
             //Определяем знак выражения
             int counterP=0,counterN=0;
             for (int i=0;i<result.length();i++){
-                if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'){
+                if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'||result.charAt(i)=='%'||result.charAt(i)=='!'||result.charAt(i)=='l'||result.charAt(i)=='s'||result.charAt(i)=='^'){
                     array[2]=result.charAt(i);
                     counterP++;
                     counterN++;
@@ -76,7 +96,7 @@ public class CalculatorMain {
             }
             //Делим строку на два числа относительно знака
             String [] tmp;
-            tmp=result.split("\\+|\\-|\\*|\\/");
+            tmp=result.split("\\+|\\-|\\*|\\/|\\%|\\!|\\^|l|s");
             //Заносим числа и знак в массив
             array[0] = Double.valueOf(tmp[0]);
             if (tmp[1].isEmpty()&&counterP>1){
@@ -110,7 +130,7 @@ public class CalculatorMain {
             //Определяем знак выражения
             int counterP=0,counterN=0;
             for (int i=0;i<result.length();i++){
-                if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'){
+                if (result.charAt(i)=='+'||result.charAt(i)=='-'||result.charAt(i)=='*'||result.charAt(i)=='/'||result.charAt(i)=='%'||result.charAt(i)=='!'||result.charAt(i)=='l'||result.charAt(i)=='s'||result.charAt(i)=='^'){
                     array[2]=result.charAt(i);
                     counterP++;
                     counterN++;
@@ -129,7 +149,7 @@ public class CalculatorMain {
             }
             //Делим строку на два числа относительно знака
             String [] tmp;
-            tmp=result.split("\\+|\\-|\\*|\\/");
+            tmp=result.split("\\+|\\-|\\*|\\/|\\%|\\!|\\^|l|s");
             //Заносим числа и знак в массив
             array[0] = Double.valueOf(tmp[0])*-1;
             if (tmp[1].isEmpty()&&counterP>1){

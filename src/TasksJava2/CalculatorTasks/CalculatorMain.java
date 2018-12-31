@@ -185,6 +185,7 @@ public class CalculatorMain {
         }
         return array;
     }
+    //Определяет > 0 или < 0 первое число
     private static boolean isPositive (String method){
         boolean positive;
         method = method.replaceAll("\\s+","");

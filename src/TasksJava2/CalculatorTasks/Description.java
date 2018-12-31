@@ -23,7 +23,7 @@ public class Description {
         return showMe;
     }
     public static void showDescription () throws IOException {
-        try(BufferedReader br = new BufferedReader( new FileReader("E:\\Java_Learning_Project\\src\\TasksJava2\\Description.txt"))){
+        try(BufferedReader br = new BufferedReader( new FileReader("E:\\Java_Learning_Project\\src\\TasksJava2\\CalculatorTasks\\Description.txt"))){
             String reader;
             while ((reader = br.readLine())!=null){
                 System.out.println(reader);

@@ -20,6 +20,7 @@ public class CalculatorMain {
             methodRecognition(stringToDoubleConverterNegative(res));
         }
     }
+    //Определяет какую операцию, соответствующего смыслу символа, выполнять через вызов и создание объекта класса
     private static void methodRecognition (Object [] array){
         try{
         Character operator = (Character) array[2];
@@ -65,6 +66,7 @@ public class CalculatorMain {
             System.out.println(e.getMessage());
         }
     }
+    //Конвертируем строку в вещественные числа, определяет знак операции и добавляет все в массив. Позволяет работать со строкой, если первый символ был "+"
     private static Object [] stringToDoubleConverter (String method){
         Object [] array = new Object[3];
         String result="";
@@ -125,6 +127,7 @@ public class CalculatorMain {
         }
         return array;
     }
+    //Тотже функционал, что и у предыдущего метода + позволяет работать со строкой если первый символ был "-"
     private static Object [] stringToDoubleConverterNegative (String method){
         Object [] array = new Object[3];
         //Убираем первый минус

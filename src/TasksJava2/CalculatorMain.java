@@ -47,8 +47,8 @@ public class CalculatorMain {
                 e.extent(array[0],array[1]);
                 break;
             case '!':
-
-
+                Factorial f = new Factorial();
+                f.printFactorial(f.factorial(array[0]));
                 break;
             case 'l':
 
@@ -98,15 +98,19 @@ public class CalculatorMain {
             String [] tmp;
             tmp=result.split("\\+|\\-|\\*|\\/|\\%|\\!|\\^|l|s");
             //Заносим числа и знак в массив
-            array[0] = Double.valueOf(tmp[0]);
-            if (tmp[1].isEmpty()&&counterP>1){
-                array[1] = Double.valueOf(tmp[2]);
-            }else if(tmp[1].isEmpty()&&counterN>1){
-                array[1] = Double.valueOf(tmp[2])*-1;
-            }else if(tmp[1].isEmpty()){
-                array[1] = Double.valueOf(tmp[2]);
-            }else{
-                array[1] = Double.valueOf(tmp[1]);
+            if (array[2].equals('!')){
+                array[0] = (int)Math.floor(Double.valueOf(tmp[0]));
+            }else {
+                array[0] = Double.valueOf(tmp[0]);
+                if (tmp[1].isEmpty() && counterP > 1) {
+                    array[1] = Double.valueOf(tmp[2]);
+                } else if (tmp[1].isEmpty() && counterN > 1) {
+                    array[1] = Double.valueOf(tmp[2]) * -1;
+                } else if (tmp[1].isEmpty()) {
+                    array[1] = Double.valueOf(tmp[2]);
+                } else {
+                    array[1] = Double.valueOf(tmp[1]);
+                }
             }
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");
@@ -151,15 +155,19 @@ public class CalculatorMain {
             String [] tmp;
             tmp=result.split("\\+|\\-|\\*|\\/|\\%|\\!|\\^|l|s");
             //Заносим числа и знак в массив
-            array[0] = Double.valueOf(tmp[0])*-1;
-            if (tmp[1].isEmpty()&&counterP>1){
-                array[1] = Double.valueOf(tmp[2]);
-            }else if(tmp[1].isEmpty()&&counterN>1){
-                array[1] = Double.valueOf(tmp[2])*-1;
-            }else if(tmp[1].isEmpty()){
-                array[1] = Double.valueOf(tmp[2]);
-            } else{
-                array[1] = Double.valueOf(tmp[1]);
+            if (array[2].equals('!')){
+                array[0] = (int)Math.floor(Double.valueOf(tmp[0]));
+            }else {
+                array[0] = Double.valueOf(tmp[0]) * -1;
+                if (tmp[1].isEmpty() && counterP > 1) {
+                    array[1] = Double.valueOf(tmp[2]);
+                } else if (tmp[1].isEmpty() && counterN > 1) {
+                    array[1] = Double.valueOf(tmp[2]) * -1;
+                } else if (tmp[1].isEmpty()) {
+                    array[1] = Double.valueOf(tmp[2]);
+                } else {
+                    array[1] = Double.valueOf(tmp[1]);
+                }
             }
         }catch (NumberFormatException e){
             System.out.println("Please enter numbers");

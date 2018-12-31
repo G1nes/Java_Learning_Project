@@ -5,7 +5,7 @@ public class Jellybean extends Gift{
     private double weight;
     private String taste;
 
-    private Jellybean (double price, double weight, String taste){
+    public Jellybean (double price, double weight, String taste){
         this.price=price;
         this.weight=weight;
         this.taste = taste;

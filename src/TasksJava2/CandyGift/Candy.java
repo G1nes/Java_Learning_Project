@@ -5,7 +5,7 @@ public class Candy extends Gift{
     private double weight;
     private String taste;
 
-    private Candy (double price, double weight, String taste){
+    public Candy (double price, double weight, String taste){
         this.price=price;
         this.weight=weight;
         this.taste=taste;

@@ -1,4 +1,4 @@
-package TasksJava2;
+package TasksJava2.CalculatorTasks;
 
 public class Factorial {
     public long factorial (Object a){

@@ -1,4 +1,4 @@
-package TasksJava2;
+package TasksJava2.CalculatorTasks;
 
 public class Extent {
     public void extent (Object a, Object b){

@@ -1,4 +1,4 @@
-package TasksJava2;
+package TasksJava2.CalculatorTasks;
 
 public class Percents {
     public void percents (Object a, Object b){

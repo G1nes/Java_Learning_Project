@@ -21,4 +21,7 @@ public class Candy extends Gift{
     public String getName(){
         return name;
     }
+    public String getTaste(){
+        return taste;
+    }
 }

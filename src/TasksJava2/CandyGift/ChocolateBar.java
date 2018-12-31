@@ -21,4 +21,7 @@ public class ChocolateBar extends Gift{
     public String getName(){
         return name;
     }
+    public String getTaste(){
+        return taste;
+    }
 }

@@ -10,7 +10,7 @@ public class CalculatorMain {
 
     public static void main (String [] args) throws IOException{
         s = new Scanner(System.in);
-        System.out.println("Please, write command in format: \"a command b\"");
+        System.out.println("To show calculator syntax enter \"show me\""+"\nOR\nWrite command in format: \"a command b\"");
         command = s.nextLine();
         if (isPositive(command)){
             methodRecognition(stringToDoubleConverter(command));

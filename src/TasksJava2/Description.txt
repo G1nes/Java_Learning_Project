@@ -1,0 +1,17 @@
+'*' - Multiplication
+
+'/' - Division
+
+'+' - Addition
+
+'-' - Subtraction
+
+'s' - Radix
+
+'^' - Extent.
+
+'!' - Factorial. To use factorial, you should write only one number before '!'.
+
+'l' - Logarithm. First number is result number, second one - foundation number
+
+'%' - Percents. Second number is percent of first number

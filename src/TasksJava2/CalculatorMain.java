@@ -13,6 +13,7 @@ public class CalculatorMain {
         System.out.println("To show calculator syntax enter \"show me\"\nOR\nWrite command in format: \"a command b\"");
         command = s.nextLine();
         String res = Description.readCommand(command);
+
         if (isPositive(res)){
             methodRecognition(stringToDoubleConverter(res));
         }else{

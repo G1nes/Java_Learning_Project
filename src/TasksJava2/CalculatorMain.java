@@ -39,8 +39,8 @@ public class CalculatorMain {
                 s.subtraction(array[0],array[1]);
                 break;
             case 's':
-
-
+                Radix r = new Radix();
+                r.radix(array[0],array[1]);
                 break;
             case '^':
                 Extent e = new Extent();
@@ -55,8 +55,8 @@ public class CalculatorMain {
 
                 break;
             case '%':
-
-
+                Percents p = new Percents();
+                p.percents(array[0],array[1]);
                 break;
         }
         }catch (NullPointerException e){

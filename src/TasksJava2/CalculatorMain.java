@@ -51,8 +51,8 @@ public class CalculatorMain {
                 f.printFactorial(f.factorial(array[0]));
                 break;
             case 'l':
-
-
+                Logarithm l = new Logarithm();
+                l.logarithm(array[0],array[1]);
                 break;
             case '%':
                 Percents p = new Percents();

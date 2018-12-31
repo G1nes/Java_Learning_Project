@@ -6,9 +6,9 @@
 
 '-' - Subtraction
 
-'s' - Radix
+'s' - Radix. Second number is extent indicator.
 
-'^' - Extent.
+'^' - Extent. Second number is extent indicator.
 
 '!' - Factorial. To use factorial, you should write only one number before '!'.
 

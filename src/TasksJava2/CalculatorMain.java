@@ -12,11 +12,11 @@ public class CalculatorMain {
         s = new Scanner(System.in);
         System.out.println("To show calculator syntax enter \"show me\"\nOR\nWrite command in format: \"a command b\"");
         command = s.nextLine();
-        Description.readCommand(command);
-        if (isPositive(command)){
-            methodRecognition(stringToDoubleConverter(command));
+        String res = Description.readCommand(command);
+        if (isPositive(res)){
+            methodRecognition(stringToDoubleConverter(res));
         }else{
-            methodRecognition(stringToDoubleConverterNegative(command));
+            methodRecognition(stringToDoubleConverterNegative(res));
         }
     }
     private static void methodRecognition (Object [] array){

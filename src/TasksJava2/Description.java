@@ -4,15 +4,19 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Description {
     public static String readCommand(String showMe) throws IOException{
+        Scanner s = new Scanner(System.in);
         String tmp = showMe;
         showMe = showMe.toLowerCase();
         showMe = showMe.replaceAll("\\s+","");
         if (showMe.equals("showme")){
             showDescription();
-            showMe= tmp;
+            System.out.println("Please enter command");
+            String tmp1 = s.nextLine();
+            showMe= tmp1;
         }else{
             showMe= tmp;
         }

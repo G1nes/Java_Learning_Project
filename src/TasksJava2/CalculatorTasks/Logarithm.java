@@ -5,6 +5,6 @@ public class Logarithm {
         double result = (double) a;
         double foundation = (double) b;
         double log = Math.log(result)/Math.log(foundation);
-        System.out.println(log);
+        System.out.printf("%.4f",log);
     }
 }

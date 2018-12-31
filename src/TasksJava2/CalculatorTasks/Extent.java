@@ -5,6 +5,6 @@ public class Extent {
         double value = (double) a;
         double indicator = (double) b;
         value = Math.pow(value,indicator);
-        System.out.println(value);
+        System.out.printf("%.4f",value);
     }
 }

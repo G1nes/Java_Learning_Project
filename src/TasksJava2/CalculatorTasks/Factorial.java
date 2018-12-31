@@ -14,6 +14,7 @@ public class Factorial {
         return d;
     }
     public void printFactorial (long d){
+
         System.out.println(d);
     }
 }

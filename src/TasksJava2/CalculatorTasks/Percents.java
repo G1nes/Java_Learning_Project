@@ -2,7 +2,9 @@ package TasksJava2.CalculatorTasks;
 
 public class Percents {
     public void percents (Object a, Object b){
-        double percents =  Math.abs((double)b);
-        System.out.println((double)a/100 * percents );
+        double ab = (double) a;
+        double bc = (double) b;
+        double percents = ab/100*bc;
+        System.out.printf("%.4f",percents );
     }
 }

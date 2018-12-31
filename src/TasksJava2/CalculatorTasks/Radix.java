@@ -5,6 +5,6 @@ public class Radix {
         double value = (double) a;
         double indicator = (double) b;
         value = Math.pow(value, 1.0/indicator);
-        System.out.println(value);
+        System.out.printf("%.4f",value);
     }
 }

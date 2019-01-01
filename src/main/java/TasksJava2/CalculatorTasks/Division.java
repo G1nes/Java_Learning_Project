@@ -1,4 +1,4 @@
-package TasksJava2.CalculatorTasks;
+package main.java.TasksJava2.CalculatorTasks;
 
 public class Division {
 

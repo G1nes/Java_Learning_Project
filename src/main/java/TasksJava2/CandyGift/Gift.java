@@ -1,4 +1,4 @@
-package TasksJava2.CandyGift;
+package main.java.TasksJava2.CandyGift;
 
 public class Gift {
 private double priceResult=0;

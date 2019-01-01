@@ -1,4 +1,4 @@
-package TasksJava2.TheLongestString;
+package main.java.TasksJava2.TheLongestString;
 
 import java.util.Scanner;
 

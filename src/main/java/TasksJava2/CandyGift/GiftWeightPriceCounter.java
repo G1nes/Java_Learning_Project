@@ -1,4 +1,4 @@
-package TasksJava2.CandyGift;
+package main.java.TasksJava2.CandyGift;
 
 public class GiftWeightPriceCounter {
     public static void main (String [] args){

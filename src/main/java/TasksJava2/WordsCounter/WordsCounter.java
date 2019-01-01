@@ -9,7 +9,7 @@ import java.util.TreeMap;
 
 public class WordsCounter {
     public static void main (String [] args) throws IOException {
-        try(BufferedReader br = new BufferedReader(new FileReader("E:\\Java_Learning_Project\\src\\TasksJava2\\WordsCounter\\File.txt"))){
+        try(BufferedReader br = new BufferedReader(new FileReader("E:\\Java_Learning_Project\\src\\main\\java\\TasksJava2\\WordsCounter\\File.txt"))){
             TreeMap<String,Integer> tm = new TreeMap<>();
             String s;
             int counter=0;
@@ -36,8 +36,8 @@ public class WordsCounter {
             }
             System.out.println("String with max count of repeat is: \""+maxRepeatString+"\" It has repeated "+maxRepeat+" times");
         }catch (FileNotFoundException e){
-            e.getMessage();
-            e.getStackTrace();
+            System.out.println(e.getMessage());
+            System.out.println(e.getStackTrace());
         }
     }
 }

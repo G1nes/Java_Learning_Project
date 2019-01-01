@@ -25,9 +25,16 @@ public class WordsCounter {
                     counter=0;
                 }
             }
+            int maxRepeat=0;
+            String maxRepeatString="";
             for (Map.Entry<String,Integer>tmp:tm.entrySet()){
+                if (tmp.getValue()>maxRepeat){
+                    maxRepeat=tmp.getValue();
+                    maxRepeatString = tmp.getKey();
+                }
                 System.out.println(tmp.getKey()+" "+tmp.getValue());
             }
+            System.out.println("String with max count of repeat is: \""+maxRepeatString+"\" It has repeated "+maxRepeat+" times");
         }catch (FileNotFoundException e){
             e.getMessage();
             e.getStackTrace();

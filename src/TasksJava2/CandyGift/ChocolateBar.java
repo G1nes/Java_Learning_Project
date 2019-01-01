@@ -6,7 +6,7 @@ public class ChocolateBar extends Gift{
     private double weight;
     private String taste;
     public static ChocolateBar cb1 = new ChocolateBar("Mars",100,100,"Nuga and chocolate");
-    public ChocolateBar (String name, double price, double weight, String taste){
+    private ChocolateBar (String name, double price, double weight, String taste){
         this.name = name;
         this.price=price;
         this.weight=weight;

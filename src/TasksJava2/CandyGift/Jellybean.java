@@ -6,7 +6,7 @@ public class Jellybean extends Gift{
     private double weight;
     private String taste;
     public static Jellybean jb1 = new Jellybean("Harry Potter beans",350,200,"like soсks");
-    public Jellybean (String name, double price, double weight, String taste){
+    private Jellybean (String name, double price, double weight, String taste){
         this.name = name;
         this.price=price;
         this.weight=weight;

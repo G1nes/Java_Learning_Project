@@ -15,13 +15,13 @@ private String description="";
     }
     public Gift(){
     }
-    public double getWeight(){
+    private double getWeight(){
         return weightResult;
     }
-    public double getPrice(){
+    private double getPrice(){
         return priceResult;
     }
-    public String getDescription(){
+    private String getDescription(){
         return description;
     }
     @Override

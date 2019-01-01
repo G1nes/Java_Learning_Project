@@ -1,4 +1,4 @@
-package main.java.TasksJava2.CandyGift;
+package TasksJava2.CandyGift;
 
 public class ChocolateBar extends Gift{
     private String name;

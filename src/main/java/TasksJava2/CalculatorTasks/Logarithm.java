@@ -1,4 +1,4 @@
-package main.java.TasksJava2.CalculatorTasks;
+package TasksJava2.CalculatorTasks;
 
 public class Logarithm {
     public void logarithm (Object a, Object b){

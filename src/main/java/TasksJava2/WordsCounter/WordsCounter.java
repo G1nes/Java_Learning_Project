@@ -1,4 +1,4 @@
-package main.java.TasksJava2.WordsCounter;
+package TasksJava2.WordsCounter;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

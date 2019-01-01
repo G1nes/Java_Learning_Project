@@ -1,4 +1,4 @@
-package main.java.TasksJava2.CalculatorTasks;
+package TasksJava2.CalculatorTasks;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

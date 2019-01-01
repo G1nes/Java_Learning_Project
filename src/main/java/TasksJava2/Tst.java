@@ -1,7 +1,7 @@
-package main.java.TasksJava2;
+package TasksJava2;
 
-import main.java.TasksJava2.CalculatorTasks.CalculatorMain;
-import main.java.TasksJava2.TheLongestString.LongestStringFinder;
+import TasksJava2.CalculatorTasks.CalculatorMain;
+import TasksJava2.TheLongestString.LongestStringFinder;
 
 import java.io.IOException;
 import java.util.Scanner;

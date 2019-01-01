@@ -1,4 +1,4 @@
-package main.java.TasksJava2.ArrayOfRandomNumbers;
+package TasksJava2.ArrayOfRandomNumbers;
 
 import java.util.ArrayList;
 import java.util.Random;

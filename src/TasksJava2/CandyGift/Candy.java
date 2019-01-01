@@ -1,12 +1,14 @@
 package TasksJava2.CandyGift;
 
+
 public class Candy extends Gift{
     private String name;
     private double price;
     private double weight;
     private String taste;
+    public static Candy c1 = new Candy("123",1,86795,"like shit");
 
-    public Candy (String name, double price, double weight, String taste){
+    private Candy (String name, double price, double weight, String taste){
         this.name = name;
         this.price=price;
         this.weight=weight;

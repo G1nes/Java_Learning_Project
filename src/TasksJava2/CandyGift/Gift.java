@@ -1,9 +1,9 @@
 package TasksJava2.CandyGift;
 
 public class Gift {
-public double priceResult=0;
-public double weightResult=0;
-public String description="";
+private double priceResult=0;
+private double weightResult=0;
+private String description="";
 
     public Gift(Candy someCandy, Jellybean someJellybean, ChocolateBar someChocolateBar){
     priceResult = someCandy.getPrice()+someJellybean.getPrice()+someChocolateBar.getPrice();
@@ -23,5 +23,9 @@ public String description="";
     }
     public String getDescription(){
         return description;
+    }
+    @Override
+    public String toString (){
+
     }
 }

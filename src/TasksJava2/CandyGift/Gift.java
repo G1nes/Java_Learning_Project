@@ -26,6 +26,7 @@ private String description="";
     }
     @Override
     public String toString (){
-
+        String result = "Total price is: "+getPrice()+"\nTotal weight is: "+getWeight()+"\n"+getDescription();
+        return result;
     }
 }
